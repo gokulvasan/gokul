@@ -1,6 +1,6 @@
 ---
 layout: category
-title: Blog Posts
+title: Blogs
 ---
 
 
