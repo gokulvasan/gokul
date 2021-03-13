@@ -2,7 +2,7 @@
 layout: post
 title: Empathizing Mammoths Brain
 categories:
-  - Blog Posts
+  - Blogs
 last_modified_at: 2021-03-10T12:25:10-05:00
 ---
 
