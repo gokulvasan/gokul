@@ -3,7 +3,7 @@ layout: post
 title: A Study On Memory Management - Scan Rate Policy
 categories:
   - Blog Posts
-last_modified_at: 2021-07-28T12:25:10-05:00
+last_modified_at: 2021-07-28
 ---
 
   <style>
@@ -180,12 +180,13 @@ Scan rate is determined by variable called swappiness, default value is 60, but 
 - If the priority is zero and swappiness are non-zero, then Scan count is set to SCAN_EQUAL. This means the ignore the fraction calculation and directly derive the scan count based on the priority for each inactive list.
 
 
-P.S. The statistical variables rotated and scanned is decomposed to half once it reaches a threshold.
+_P.S. The statistical variables rotated and scanned is decomposed to half once it reaches a threshold._
 
-intuitively, it is a heuristical thought that reasons with a belief that more the pages are rotated( [see Second Chance Algorithm](http://www.mathcs.emory.edu/~cheung/Courses/355/Syllabus/9-virtual-mem/SC-replace.html)) in a particular lru list then the possibility to reclaim pages from the same are less.  Finally, it’s worth to note that described policies are simplified to provide clarity on the core idea.
-
+intuitively, it is a heuristical thought which reasons the belief that more the pages are rotated ([see Second Chance Algorithm](http://www.mathcs.emory.edu/~cheung/Courses/355/Syllabus/9-virtual-mem/SC-replace.html)) in a particular lru list then the possibility to reclaim pages from the same are less.
 
 ![scanning](https://user-images.githubusercontent.com/79076337/110758936-1465d500-8273-11eb-9d5c-5a31bf4d8ce6.png)
 
 **Fig3:** A detailed description of Linux Scan count determination.
+
+ The described policies are simplified to provide clarity on the core idea.
 
