@@ -3,7 +3,6 @@ layout: post
 title: A Study On Memory Management - Scan Rate Policy
 categories:
   - Blog Posts
-last_modified_at: 2021-07-28
 ---
 
   <style>
