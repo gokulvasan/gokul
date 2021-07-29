@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A Study On Memory Management 
+title: A Study On Memory Management - Scan Rate Policy
 categories:
   - Blog Posts
 last_modified_at: 2021-03-10T12:25:10-05:00
@@ -23,7 +23,6 @@ div.scrollFormula {
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
 
-#  A study on Unix Memory Management - Scan Rate Policy
 This article is a study and analysis of scan rate policy within the Memory Management (admirably abbreviated as MM :-)) module of acclaimed Unix-like operating systems: OpenSolaris, FreeBSD and Linux.
 
 Page management in MM can be categorized into three major policies.
