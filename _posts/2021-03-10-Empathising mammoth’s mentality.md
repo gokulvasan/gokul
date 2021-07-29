@@ -136,7 +136,7 @@ In this section we will try to understand the implementation of the policy in Fr
 
 **Implementation in Linux:**
 
-Linux uses watermark is amalgamated with demand based scanning, i.e., on allocating a page, the watermark is tested and if the current watermark before the allocation is less than the desired, then try reclaiming the zone directly and also start kswapd if required.  
+Linux watermark is amalgamated with demand based scanning, i.e., on allocating a page, the watermark is tested and if the current watermark before the allocation is less than the desired, then try reclaiming the zone directly and also start kswapd if required.  
 The scan amount is based on user defined parameter called [swappiness](https://elixir.bootlin.com/source/mm/vmscan.c?v=4.4#L1).
 
 **Model.** The Memory (A node in [NUMA](https://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2008-r2/ms178144(v=sql.105)?redirectedfrom=MSDN) based machines) is basically divided into [zones](https://dl.acm.org/doi/10.1145/366199.366256).
