@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Empathizing Mammoths Brain
+title: Understanding Memory Management Watermarks in Unix
 categories:
   - Blogs
 last_modified_at: 2021-03-10T12:25:10-05:00
@@ -17,10 +17,13 @@ last_modified_at: 2021-03-10T12:25:10-05:00
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
   
-## Determining Watermark in Linux 
+## Determining Watermark in Linux
+
+Watermarks are statically determined waypoints over free pages in the main memory. 
 Watermark determines the scan rate policy of the memory management.
 
-Linux kernel as described in my previous writing has 3 major watermarks, High, Min and Low.  This blog is a brief view of the watermark calculation in the Linux system.
+Linux kernel as described in my [previous writing](https://gokulvasan.github.io/gokul/blog%20posts/2021/03/10/Empathising-mammoth-s-mentality.html) has 3 major watermarks, High, Min and Low. 
+This blog is a brief view of the watermark calculation within the Linux kernel.
 
 
 ### 1. Use variable from admin window /proc/sys/vm/min_free_kbytes.
