@@ -31,7 +31,7 @@ Page management in MM can be categorized into three major policies.
 2. **Placement Policy:** Where to place the fetched page in main memory (Page Coloring).
 3. **Replacement Policy:** Which page to replace in case of memory shortage (LRU, LFU, LRFU...).
 
-The above mentioned policies are well studied and reasoned in the literature, however, a disregarded policy which has been making rounds recently as it directly impacts the performance of a system with regard to memory management is **scan rate policy**.
+The above mentioned policies are well studied and reasoned in the literature, however, a disregarded policy which has been making rounds recently as it directly impacts the performance of a system is the **scan rate policy**.
 
 Rest of this specific work will focus on this policy and its approach in different operating system.
 
