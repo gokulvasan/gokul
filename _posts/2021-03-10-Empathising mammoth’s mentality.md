@@ -3,7 +3,7 @@ layout: post
 title: A Study On Memory Management - Scan Rate Policy
 categories:
   - Blog Posts
-last_modified_at: 2021-03-10T12:25:10-05:00
+last_modified_at: 2021-07-28T12:25:10-05:00
 ---
 
   <style>
@@ -43,11 +43,13 @@ However, scanning through the entire alloced page list and continous update of t
 To avoid such a colossal expense, operating systems will only scan a portion of the list at a given _moment of time_ and will update only the scanned pages position.
 The policy that decides on the fraction to scan at a given instance of time is termed as scan rate policy.
 
-**Generalities in the Policy Irrespective of the OS.** Habitually on nearing a particular distance to exhaustion, the operating system will start a kernel level daemon, that runs in concurrence with other processes, termed either as pageout daemon( OpenSolaris and OpenBSD) or Kswapd daemon( Linux). 
+**```Generalities in the Policy Irrespective of the OS```** 
+
+Habitually on nearing a particular distance to exhaustion, the operating system will start a kernel level daemon, that runs in concurrence with other processes, termed either as pageout daemon( OpenSolaris and OpenBSD) or Kswapd daemon( Linux). 
 Albeit different names for the daemon, its objective remains the same .i.e., scan a certain amount of pages, apply the desired replacement policy and evict a set of pages to leeway for the current memory need.
 The free page list will have a set of waypoints in between the list called _watermark_. 
 In common, the watermark decides on when to start the scan, rate of scan, number of times to scan, amount of processor utilisation page scanner can take (called CPU CAP), amount of I/O utilisation page scanner can use (called I/O CAP), etc., but the mentioned set varies both in implementation and inclusion based on the corresponding platform.
- Extensively, many operating systems quantify the measure of watermarks in page numbers.
+Extensively, many operating systems quantify the measure of watermarks in page numbers.
 
 In the following sections we will see how the scan rate policy is implemented in different OS.
 
@@ -185,5 +187,5 @@ intuitively, it is a heuristical thought that reasons with a belief that more th
 
 ![scanning](https://user-images.githubusercontent.com/79076337/110758936-1465d500-8273-11eb-9d5c-5a31bf4d8ce6.png)
 
-Detail Description Of Linux Scan count determination.
+**Fig3:** A detailed description of Linux Scan count determination.
 
