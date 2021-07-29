@@ -12,6 +12,7 @@ layout: page
     <li>
       <h3>
         <a href="{{ post.url | relative_url }}">
+          <small>{{ post.date | date_to_string }}</small>
           {{ post.title }}
         </a>
       </h3>
